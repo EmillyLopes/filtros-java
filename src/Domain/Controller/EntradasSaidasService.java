@@ -78,16 +78,10 @@ public class EntradasSaidasService  {
     public void verificaNegativo(int opcao, File file) throws IOException {
         switch(opcao){
             case 1:
-                cinzaService.cinzaMedia(file);
+                filtrosServices.negativo(file);
                 break;
             case 2:
-                cinzaService.cinzaRed(file);
-                break;
-            case 3:
-                cinzaService.cinzaGreen(file);
-                break;
-            case 4:
-                cinzaService.cinzaBlue(file);
+                filtrosServices.negativoY(file);
                 break;
             case 0:
                 System.exit(1);

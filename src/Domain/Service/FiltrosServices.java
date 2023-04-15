@@ -23,7 +23,24 @@ public class FiltrosServices {
             }
         }
 
-        ImageIO.write(image, "jpg", new File("src/resources/negative.jpg"));
+        ImageIO.write(image, "jpg", new File("src/resources/negativo.jpg"));
+    }
+    public void negativoY(File img) throws IOException {
+        BufferedImage image = ImageIO.read(img);
+
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                Color color = new Color(image.getRGB(x, y));
+                int r = Math.max(0, 255 - color.getRed());
+                int g = Math.max(0, 255 - color.getGreen());
+                int b = Math.max(0, 255 - color.getBlue());
+
+                Color newColor = new Color(r, g, b);
+                image.setRGB(x, image.getHeight() - y - 1, newColor.getRGB());
+            }
+        }
+
+        ImageIO.write(image, "jpg", new File("src/resources/negativoY.jpg"));
     }
 
     public void limiarizacao(File img, int limiar) throws IOException {
