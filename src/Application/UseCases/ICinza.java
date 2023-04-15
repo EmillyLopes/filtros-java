@@ -7,10 +7,10 @@ public interface ICinza {
 
     public void cinzaMedia(File img) throws IOException;
 
-    public void cinzaBandaRed(File img) throws IOException;
+    public void cinzaRed(File img) throws IOException;
 
-    public void cinzaBandaGreen(File img) throws IOException;
+    public void cinzaGreen(File img) throws IOException;
 
-    public void cinzaBandaBlue(File img) throws IOException;
+    public void cinzaBlue(File img) throws IOException;
 
 }

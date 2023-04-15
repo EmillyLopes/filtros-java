@@ -11,6 +11,6 @@ public interface IColors {
 
     void bandaBlue(File file) throws IOException;
 
-    void aumentoTonalidade(File file, int opcao, int value) throws IOException;
+    void aumentoTonalidade(File file, int opcao, int value, String cor) throws IOException;
 
 }

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ConversaoService {
+public class ConversaoService implements IConversor{
 
     public HashMap<String, ArrayList> conversaoRgbToYIQ(File img) throws IOException {
         BufferedImage image = ImageIO.read(img);
@@ -68,7 +68,7 @@ public class ConversaoService {
             }
         }
 
-        ImageIO.write(image, "jpg", new File("yiqToRgb" + ".jpg"));
+        ImageIO.write(image, "jpg", new File("src/resources/yiqToRgb" + ".jpg"));
     }
 
 }

@@ -13,9 +13,11 @@ public class FiltroApplication {
 
         EntradasSaidasModel model = new EntradasSaidasModel();
 
-        int opcao = model.menu();
-        model.verificaMenu(opcao,file);
-
+        int opcao = -1;
+        while (opcao != 0) {
+            opcao = model.menu();
+            model.verificaMenu(opcao, file);
+        }
 
     }
 

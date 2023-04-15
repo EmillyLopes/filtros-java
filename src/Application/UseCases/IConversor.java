@@ -2,11 +2,13 @@ package Application.UseCases;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface IConversor {
 
-    public void conversaoYIQToRGB(File img) throws IOException ;
+    public HashMap<String, ArrayList> conversaoRgbToYIQ(File img) throws IOException;
 
-    public void conversaoRGBToYIQ(File img) throws IOException ;
+    public void conversaoYiqToRgb(File img, HashMap<String, ArrayList> yiq) throws IOException;
 
 }

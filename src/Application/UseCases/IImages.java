@@ -8,6 +8,4 @@ public interface IImages {
 
     BufferedImage readImages(File file) throws IOException;
 
-    void createImages();
-
 }

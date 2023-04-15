@@ -14,8 +14,4 @@ public class ImagesService implements IImages {
         return ImageIO.read(file);
     }
 
-    @Override
-    public void createImages() {
-
-    }
 }

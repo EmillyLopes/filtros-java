@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class EntradasSaidasService {
+public class EntradasSaidasService  {
 
     ColorsService colorsService = new ColorsService();
     CinzaService cinzaService = new CinzaService();
@@ -33,7 +33,15 @@ public class EntradasSaidasService {
     }
     public void verificaAumentoTonalidade(int opcao, File file) throws IOException {
         int valorAumentado = valorInt();
-        colorsService.aumentoTonalidade(file,opcao,valorAumentado);
+        String cor = " ";
+        if(opcao == 1){
+            cor = "red";
+        }if( opcao == 2){
+            cor = "green";
+        }if(opcao == 3){
+            cor = "blue";
+        }
+        colorsService.aumentoTonalidade(file,opcao,valorAumentado, cor);
     }
     public void verificaCinza(int opcao, File file) throws IOException {
         switch(opcao){
@@ -74,6 +82,12 @@ public class EntradasSaidasService {
                 break;
             case 2:
                 cinzaService.cinzaRed(file);
+                break;
+            case 3:
+                cinzaService.cinzaGreen(file);
+                break;
+            case 4:
+                cinzaService.cinzaBlue(file);
                 break;
             case 0:
                 System.exit(1);

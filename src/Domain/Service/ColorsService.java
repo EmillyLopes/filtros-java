@@ -65,7 +65,7 @@ public class ColorsService implements IColors {
     }
 
     @Override
-    public void aumentoTonalidade(File file, int opcao, int value) throws IOException {
+    public void aumentoTonalidade(File file, int opcao, int value, String cor) throws IOException {
         BufferedImage image = imagesService.readImages(file);
 
         for (int x = 0; x < image.getWidth(); x++) {
@@ -92,7 +92,7 @@ public class ColorsService implements IColors {
             }
         }
 
-        ImageIO.write(image, "jpg", new File("src/resources/aumentoTon_" + 1 + ".jpg"));
+        ImageIO.write(image, "jpg", new File("src/resources/aumentoTon_" + cor + ".jpg"));
     }
 
 }

@@ -23,6 +23,7 @@ public class EntradasSaidasModel {
         return opcao;
     }
 
+
     public int menuRGB() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Digite :" +
